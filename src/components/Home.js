@@ -1,3 +1,4 @@
+import AddBook from './AddBook';
 import Book from './Book';
 import Navbar from './Navbar';
 
@@ -31,6 +32,7 @@ const Home = () => {
           <Book key={value.id} bookitem={value} />
         ))}
       </div>
+      <AddBook />
     </>
   );
 };
