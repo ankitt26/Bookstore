@@ -1,4 +1,5 @@
 import Book from './Book';
+import Navbar from './Navbar';
 
 const Home = () => {
   const BookList = [
@@ -23,7 +24,15 @@ const Home = () => {
   ];
 
   return (
-    BookList.map((value) => <Book key={value.id} bookitem={value} />));
+    <>
+      <Navbar />
+      <div>
+        {BookList.map((value) => (
+          <Book key={value.id} bookitem={value} />
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default Home;
