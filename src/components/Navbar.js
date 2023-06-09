@@ -1,16 +1,14 @@
 import { NavLink } from 'react-router-dom';
-import Book from './Book';
 
 const Navbar = () => (
   <nav className="nav">
     <h1>BookStore</h1>
     <ul>
       <li>
-        {' '}
-        <NavLink to={Book}>Books</NavLink>
+        <NavLink to="/">Books</NavLink>
       </li>
       <li>
-        categories
+        <NavLink to="Categories">Categories</NavLink>
       </li>
     </ul>
   </nav>
