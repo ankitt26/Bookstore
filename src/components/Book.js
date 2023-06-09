@@ -9,6 +9,11 @@ const Book = ({ bookitem }) => {
       <h5>{topic}</h5>
       <h2>{title}</h2>
       <p>{author}</p>
+      <div className="buttons">
+        <button className="btn" type="submit">Comments</button>
+        <button className="btn" type="submit">Remove</button>
+        <button className="btn" type="submit">Edit</button>
+      </div>
 
     </div>
   );

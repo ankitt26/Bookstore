@@ -1,28 +1,33 @@
-import AddBook from './AddBook';
+import { useState } from 'react';
+import AddNewBook from './AddNewBook';
 import Book from './Book';
 import Navbar from './Navbar';
 
 const Home = () => {
-  const BookList = [
+  const [BookList, setBookList] = useState([
     {
       id: 1,
-      title: 'Book 1',
-      topic: 'education',
+      title: 'Booklife',
+      topic: 'science',
       author: 'Ankitt',
     },
     {
       id: 2,
-      title: 'Book 1',
+      title: 'guoliu',
       topic: 'education',
-      author: 'Ankitt',
+      author: 'Ankjk',
     },
     {
       id: 3,
-      title: 'Book 1',
-      topic: 'education',
-      author: 'Ankitt',
+      title: 'man of war',
+      topic: 'sports',
+      author: 'Ankmid',
     },
-  ];
+  ]);
+
+  const newbook = () => {
+    setBookList((prev) => prev);
+  };
 
   return (
     <>
@@ -32,7 +37,7 @@ const Home = () => {
           <Book key={value.id} bookitem={value} />
         ))}
       </div>
-      <AddBook />
+      <AddNewBook newbook={newbook} />
     </>
   );
 };

@@ -1,6 +1,8 @@
-const AddBook = () => (
+import PropTypes from 'prop-types';
+
+const AddNewBook = ({ newbook }) => (
   <>
-    <form onSubmit={() => {}}>
+    <form onSubmit={() => { newbook(); }}>
       <h2>Add New Book</h2>
       <input type="text" onChange={() => {}} placeholder="Title" required />
       <select id="dropdown" name="Categories">
@@ -14,4 +16,8 @@ const AddBook = () => (
   </>
 );
 
-export default AddBook;
+AddNewBook.propTypes = {
+  newbook: PropTypes.func.isRequired,
+};
+
+export default AddNewBook;
