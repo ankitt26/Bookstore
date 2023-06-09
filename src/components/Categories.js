@@ -1,9 +1,7 @@
-import Navbar from './Navbar';
-
 const Categories = () => (
   <>
-    <Navbar />
     <div>Work in progress.......</div>
+    <p>Please check back later for updates.</p>
   </>
 );
 

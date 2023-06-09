@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import AddNewBook from './AddNewBook';
 import Book from './Book';
-import Navbar from './Navbar';
 
 const Home = () => {
   const [BookList, setBookList] = useState([
@@ -31,7 +30,6 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
       <div>
         {BookList.map((value) => (
           <Book key={value.id} bookitem={value} />
