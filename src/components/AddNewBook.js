@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { addBook } from '../redux/books/booksSlice';
 
 const AddNewBook = () => {
-  const newId = useSelector((state) => state.books.books.length);
+  const newId = useSelector((state) => state.books.books.length + 1);
 
   const [title, settitle] = useState();
   const [author, setauthor] = useState();
@@ -17,9 +17,9 @@ const AddNewBook = () => {
   };
 
   const dispatch = useDispatch();
+
   const onSubmit = (ev) => {
-    ev.preventDefault();
-    return dispatch(
+    dispatch(
       addBook({
         item_id: `item${newId}`,
         title,
@@ -27,7 +27,9 @@ const AddNewBook = () => {
         category: 'Fiction',
       }),
     );
+    ev.preventDefault();
   };
+
   return (
     <>
       <form onSubmit={onSubmit}>

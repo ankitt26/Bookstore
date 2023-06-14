@@ -4,7 +4,6 @@ import Book from './Book';
 
 const Home = () => {
   const data = useSelector((state) => state.books.books);
-
   return (
     <>
       <div>
