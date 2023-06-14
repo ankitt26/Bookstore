@@ -1,8 +1,6 @@
-import PropTypes from 'prop-types';
-
-const AddNewBook = ({ newbook }) => (
+const AddNewBook = () => (
   <>
-    <form onSubmit={() => { newbook(); }}>
+    <form onSubmit={() => {}}>
       <h2>Add New Book</h2>
       <input type="text" onChange={() => {}} placeholder="Title" required />
       <input type="text" onChange={() => {}} placeholder="Author" required />
@@ -10,9 +8,4 @@ const AddNewBook = ({ newbook }) => (
     </form>
   </>
 );
-
-AddNewBook.propTypes = {
-  newbook: PropTypes.func.isRequired,
-};
-
 export default AddNewBook;

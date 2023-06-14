@@ -1,41 +1,24 @@
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import AddNewBook from './AddNewBook';
 import Book from './Book';
 
 const Home = () => {
-  const [BookList, setBookList] = useState([
-    {
-      id: 1,
-      title: 'Booklife',
-      topic: 'science',
-      author: 'Ankitt',
-    },
-    {
-      id: 2,
-      title: 'guoliu',
-      topic: 'education',
-      author: 'Ankjk',
-    },
-    {
-      id: 3,
-      title: 'man of war',
-      topic: 'sports',
-      author: 'Ankmid',
-    },
-  ]);
-
-  const newbook = () => {
-    setBookList((prev) => prev);
-  };
-
+  const data = useSelector((state) => state.books.books);
+  console.log(data);
   return (
     <>
       <div>
-        {BookList.map((value) => (
-          <Book key={value.id} bookitem={value} />
+        {data.map((value) => (
+          <Book
+            key={value.item_id}
+            id={value.item_id}
+            title={value.title}
+            author={value.author}
+            category={value.category}
+          />
         ))}
       </div>
-      <AddNewBook newbook={newbook} />
+      <AddNewBook />
     </>
   );
 };
