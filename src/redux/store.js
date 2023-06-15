@@ -7,7 +7,7 @@ const store = configureStore({
   reducer: {
     books: bookSlice,
     categories: categoriesSlice,
-    Fetch: Fetch,
+    Fetch,
   },
 });
 
