@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import AddNewBook from './AddNewBook';
 import Book from './Book';
-import { fetchData } from '../redux/books/Fetch';
+import { fetchData } from '../redux/books/booksSlice';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -10,8 +10,10 @@ const Home = () => {
     dispatch(fetchData());
   }, [dispatch]);
 
-  const data = useSelector((state) => state.fetchdata.items);
+  const data = useSelector((state) => state.books.items);
+  console.log(data.length);
   const arrayData = [];
+  console.log(arrayData);
 
   Object.keys(data).forEach((key) => {
     if (Object.prototype.hasOwnProperty.call(data, key)) {

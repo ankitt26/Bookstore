@@ -1,41 +1,65 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
+
+const appUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZtNFhlL0BNvzbTbQF18L/books';
+
+const fetchData = createAsyncThunk('fetchdata', async () => {
+  try {
+    const response = await axios.get(appUrl);
+    const { data } = response;
+    console.log(data);
+    return data;
+    // return Object.values(data); // to convert object to array
+  } catch (error) {
+    throw new Error('Data not fetched properly');
+  }
+});
+
+const deleteBook = createAsyncThunk('deletebooks', async (bookId) => {
+  await axios.delete(`${appUrl}/${bookId}`);
+  return bookId;
+});
+
+const postBook = createAsyncThunk('postbooks', async (book) => {
+  try {
+    const response = await axios.post(appUrl, book);
+    const apiResult = response.data.result;
+    return { apiResult, book };
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      throw new Error(error.response.data.message);
+    } else {
+      throw error;
+    }
+  }
+});
 
 const bookSlice = createSlice({
   name: 'books',
   initialState: {
-    books:
-    [
-      {
-        item_id: 'item1',
-        title: 'The Great Gatsby',
-        author: 'John Smith',
-        category: 'Fiction',
-      },
-      {
-        item_id: 'item2',
-        title: 'Anna Karenina',
-        author: 'Leo Tolstoy',
-        category: 'Fiction',
-      },
-      {
-        item_id: 'item3',
-        title: 'The Selfish Gene',
-        author: 'Richard Dawkins',
-        category: 'Nonfiction',
-      },
-    ],
+    items: [],
+    isLoading: false,
+    error: null,
   },
-  reducers: {
-    addBook: (state, action) => {
-      const newBook = action.payload;
-      state.books.push(newBook);
-    },
-    removeBook: (state, action) => {
-      const bookId = action.payload;
-      state.books = state.books.filter((book) => book.item_id !== bookId);
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchData.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+      .addCase(fetchData.fulfilled, (state, action) => ({
+        ...state,
+        isLoading: false,
+        items: action.payload,
+      }))
+      .addCase(fetchData.rejected, (state) => ({
+        ...state,
+        isLoading: false,
+        error: 'Error occurred',
+      }));
   },
 });
 
+export { fetchData, deleteBook, postBook };
 export default bookSlice.reducer;
-export const { addBook, removeBook } = bookSlice.actions;
