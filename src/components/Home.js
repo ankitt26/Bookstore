@@ -11,9 +11,8 @@ const Home = () => {
   }, [dispatch]);
 
   const data = useSelector((state) => state.books.items);
-  console.log(data.length);
+
   const arrayData = [];
-  console.log(arrayData);
 
   Object.keys(data).forEach((key) => {
     if (Object.prototype.hasOwnProperty.call(data, key)) {

@@ -7,7 +7,7 @@ const fetchData = createAsyncThunk('fetchdata', async () => {
   try {
     const response = await axios.get(appUrl);
     const { data } = response;
-    console.log(data);
+
     return data;
     // return Object.values(data); // to convert object to array
   } catch (error) {
