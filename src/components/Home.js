@@ -1,22 +1,41 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import AddNewBook from './AddNewBook';
 import Book from './Book';
+import { fetchData } from '../redux/books/booksSlice';
 
 const Home = () => {
-  const data = useSelector((state) => state.books.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [dispatch]);
+
+  const data = useSelector((state) => state.books.items);
+
+  const arrayData = [];
+
+  Object.keys(data).forEach((key) => {
+    if (Object.prototype.hasOwnProperty.call(data, key)) {
+      const items = data[key];
+      for (let i = 0; i < items.length; i += 1) {
+        const item = items[i];
+        arrayData.push({ key, item });
+      }
+    }
+  });
+
+  const renderData = (value) => (
+    <Book
+      key={value.key}
+      id={value.key}
+      title={value.item.title}
+      author={value.item.author}
+      category={value.item.category}
+    />
+  );
   return (
     <>
-      <div>
-        {data.map((value) => (
-          <Book
-            key={value.item_id}
-            id={value.item_id}
-            title={value.title}
-            author={value.author}
-            category={value.category}
-          />
-        ))}
-      </div>
+      <div>{arrayData.map(renderData)}</div>
       <AddNewBook />
     </>
   );
