@@ -22,15 +22,9 @@ const deleteBook = createAsyncThunk('deletebooks', async (bookId) => {
 
 const postBook = createAsyncThunk('postbooks', async (book) => {
   try {
-    const response = await axios.post(appUrl, book);
-    const apiResult = response.data.result;
-    return { apiResult, book };
+    await axios.post(appUrl, book);
   } catch (error) {
-    if (axios.isAxiosError(error)) {
-      throw new Error(error.response.data.message);
-    } else {
-      throw error;
-    }
+    throw new Error('error in post data');
   }
 });
 
