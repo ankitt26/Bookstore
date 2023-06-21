@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { postBook } from '../redux/books/booksSlice';
+import { fetchData, postBook } from '../redux/books/booksSlice';
 
 const AddNewBook = () => {
   const [title, settitle] = useState('');
@@ -17,8 +17,11 @@ const AddNewBook = () => {
 
   const dispatch = useDispatch();
 
-  const onSubmit = (ev) => {
-    dispatch(
+  const onSubmit = async (ev) => {
+    ev.preventDefault();
+    settitle('');
+    setauthor('');
+    await dispatch(
       postBook({
         item_id: `item${uuidv4()}`,
         title,
@@ -26,9 +29,7 @@ const AddNewBook = () => {
         category: 'Fiction',
       }),
     );
-    ev.preventDefault();
-    settitle('');
-    setauthor('');
+    await dispatch(fetchData());
   };
 
   return (
