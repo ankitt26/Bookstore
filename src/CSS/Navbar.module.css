@@ -7,6 +7,7 @@
   border-radius: 10px;
   height: 4.938rem;
   margin: 4px auto;
+  margin-bottom: 15px;
   background-color: #fff;
 }
 
@@ -73,5 +74,5 @@ ul {
   color: rgb(55, 116, 228);
   font-size: 22px;
   position: relative;
-  left: 800px;
+  left: 780px;
 }

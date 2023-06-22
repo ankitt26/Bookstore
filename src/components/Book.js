@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteBook, fetchData } from '../redux/books/booksSlice';
+import styles from '../CSS/Book.module.css';
 
 const Book = ({
   id, title, author, category,
@@ -13,20 +14,27 @@ const Book = ({
     await dispatch(fetchData());
   };
   return (
-    <div className="book" id={id}>
-      <h5>{category}</h5>
-      <h2>{title}</h2>
-      <p>{author}</p>
-      <div className="buttons">
-        <button className="btn" type="submit">
-          Comments
-        </button>
-        <button className="btn" type="submit" id={id} onClick={removeBtn}>
-          Remove
-        </button>
-        <button className="btn" type="submit">
-          Edit
-        </button>
+    <div className={styles.book} id={styles.id}>
+      <div className={styles.details}>
+        <h5 className={styles.category}>{category}</h5>
+        <h2 className={styles.title}>{title}</h2>
+        <p className={styles.author}>{author}</p>
+        <div className={styles.buttons}>
+          <button className={styles.btn} type="submit">
+            Comments
+          </button>
+          <button
+            className={styles.btn}
+            type="submit"
+            id={id}
+            onClick={removeBtn}
+          >
+            Remove
+          </button>
+          <button className={styles.btn} type="submit">
+            Edit
+          </button>
+        </div>
       </div>
     </div>
   );
