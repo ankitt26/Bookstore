@@ -4,9 +4,9 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 5px;
   height: 4.938rem;
-  margin: 4px auto;
+  margin: 14px auto;
   margin-bottom: 15px;
   background-color: #fff;
 }
@@ -21,7 +21,7 @@ h1 {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: rgb(55, 116, 228);
+  color: #0290ff;
 }
 
 ul {
@@ -42,7 +42,8 @@ ul {
 .books {
   width: 3.688rem;
   height: 1rem;
-  margin: 1.125rem 2.563rem 0.688rem 0;
+
+  /* margin: 1.125rem 2.563rem 0.688rem 0; */
   font-family: Montserrat, sans-serif;
   font-size: 15px;
   font-weight: normal;
@@ -57,7 +58,8 @@ ul {
 .categories {
   width: 6.563rem;
   height: 1rem;
-  margin: 1.125rem 41.5rem 0.688rem 2.563rem;
+
+  /* margin: 1.125rem 41.5rem 0.688rem 2.563rem; */
   font-family: Montserrat, sans-serif;
   font-size: 15px;
   font-weight: normal;
@@ -70,7 +72,7 @@ ul {
 }
 
 .user {
-  color: rgb(55, 116, 228);
+  color: #0290ff;
   font-size: 22px;
   position: relative;
   left: 780px;

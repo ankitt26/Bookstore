@@ -1,9 +1,13 @@
 .progressDiv {
-  width: 100px;
+  width: 150px;
   display: flex;
+  margin-left: 250px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  /* background-color: aquamarine; */
+  font-family: Montserrat, sans-serif;
 }
 
 .value {
@@ -11,8 +15,16 @@
   font-size: 20px;
 }
 
+.percent {
+  font-size: 30px;
+}
+
+.completed {
+  font-size: 14px;
+}
+
 .progressBarWrapper {
-  width: 60px;
+  width: 65px;
 }
 
 /* .progressBar {
@@ -27,7 +39,7 @@
 }
 
 .progressBar text {
-  fill: #3f51b5;
+  fill: #0290ff;
   font-size: 96px;
   font-weight: bold;
 }
