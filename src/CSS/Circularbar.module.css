@@ -1,0 +1,33 @@
+.progressDiv {
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.value {
+  color: black;
+  font-size: 20px;
+}
+
+.progressBarWrapper {
+  width: 60px;
+}
+
+/* .progressBar {
+  Customize the root svg element
+} */
+
+.progressBar path {
+  stroke: #3f51b5;
+  font-size: 300px;
+  stroke-linecap: butt;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.progressBar text {
+  fill: #3f51b5;
+  font-size: 96px;
+  font-weight: bold;
+}

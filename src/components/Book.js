@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteBook, fetchData } from '../redux/books/booksSlice';
 import styles from '../CSS/Book.module.css';
+import CircularProgressBar from './Circularbar';
 
 const Book = ({
   id, title, author, category,
@@ -36,6 +37,7 @@ const Book = ({
           </button>
         </div>
       </div>
+      <CircularProgressBar />
     </div>
   );
 };

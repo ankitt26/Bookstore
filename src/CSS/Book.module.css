@@ -1,10 +1,14 @@
 .book {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 87%;
   height: 10.625rem;
   margin: 12px auto;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
-  background-color: red;
+  background-color: #fff;
 }
 
 .category {
@@ -12,9 +16,9 @@
 }
 
 .title {
-  color: yellow;
+  color: rgb(109, 109, 100);
 }
 
 .author {
-  color: white;
+  color: rgb(137, 126, 126);
 }
