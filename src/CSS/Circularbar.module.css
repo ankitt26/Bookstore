@@ -1,7 +1,7 @@
 .progressDiv {
   width: 150px;
   display: flex;
-  margin-left: 250px;
+  margin-left: 350px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -16,11 +16,13 @@
 }
 
 .percent {
+  color: #7d7d7e;
   font-size: 30px;
 }
 
 .completed {
   font-size: 14px;
+  color: #313131;
 }
 
 .progressBarWrapper {

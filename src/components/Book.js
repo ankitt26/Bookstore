@@ -21,11 +21,11 @@ const Book = ({
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.author}>{author}</p>
         <div className={styles.buttons}>
-          <button className={styles.btn} type="submit">
+          <button className={`${styles.btn} ${styles.btnBr}`} type="submit">
             Comments
           </button>
           <button
-            className={styles.btn}
+            className={`${styles.btn} ${styles.btnBr}`}
             type="submit"
             id={id}
             onClick={removeBtn}

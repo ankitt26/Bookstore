@@ -9,11 +9,7 @@ const CircularProgressBar = () => {
   return (
     <main className={styles.progressDiv}>
       <div className={styles.progressBarWrapper}>
-        <CircularProgressbar
-          value={value}
-          // text={`${value}%`}
-          className={styles.progressBar}
-        />
+        <CircularProgressbar value={value} className={styles.progressBar} />
       </div>
       <div>
         <span className={styles.percent}>
@@ -25,7 +21,6 @@ const CircularProgressBar = () => {
         <span className={styles.completed}>Completed</span>
       </div>
     </main>
-
   );
 };
 

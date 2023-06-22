@@ -6,3 +6,11 @@ body {
 .active {
   color: rgb(81, 76, 76);
 }
+
+hr {
+  height: 1.5px;
+  width: 87%;
+  background-color: rgb(239, 232, 232);
+  border: none;
+  margin: 40px auto 30px;
+}
