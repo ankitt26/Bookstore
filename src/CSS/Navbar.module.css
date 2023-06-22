@@ -75,5 +75,6 @@ ul {
   color: #0290ff;
   font-size: 22px;
   position: relative;
-  left: 780px;
+  left: 765px;
+  cursor: pointer;
 }

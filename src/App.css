@@ -14,3 +14,15 @@ hr {
   border: none;
   margin: 40px auto 30px;
 }
+
+.work {
+  font-family: "Ysabeau", sans-serif;
+  font-size: 40px;
+  color: rgb(114, 114, 114);
+}
+
+.work-para {
+  font-family: "Nunito", sans-serif;
+
+  /* font-family: 'Ysabeau', sans-serif; */
+}

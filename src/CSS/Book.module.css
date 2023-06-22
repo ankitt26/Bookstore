@@ -6,7 +6,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 87%;
-  height: 10.625rem;
+  height: 9.625rem;
   margin: 12px auto;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
@@ -16,6 +16,7 @@
 
 .details {
   height: 100%;
+  width: 18%;
 
   /* background-color: rgb(152, 203, 31); */
   display: flex;
@@ -76,6 +77,7 @@
   border-radius: 4px;
   color: #0290ff;
   border: none;
+  cursor: pointer;
 }
 
 .btnBr {
@@ -130,4 +132,5 @@
   background-color: #0290ff;
   color: #fff;
   border: none;
+  cursor: pointer;
 }
