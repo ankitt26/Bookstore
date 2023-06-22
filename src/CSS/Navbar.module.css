@@ -1,0 +1,77 @@
+.nav {
+  width: 96%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  height: 4.938rem;
+  margin: 4px auto;
+  background-color: #fff;
+}
+
+h1 {
+  width: 15rem;
+  padding-left: 20px;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(55, 116, 228);
+}
+
+ul {
+  width: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 22px;
+  align-items: center;
+  list-style: none;
+  text-align: left;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* li {
+} */
+
+.books {
+  width: 3.688rem;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  text-decoration: none;
+}
+
+.categories {
+  width: 6.563rem;
+  height: 1rem;
+  margin: 1.125rem 41.5rem 0.688rem 2.563rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  text-decoration: none;
+}
+
+.user {
+  color: rgb(55, 116, 228);
+  font-size: 22px;
+  position: relative;
+  left: 800px;
+}
