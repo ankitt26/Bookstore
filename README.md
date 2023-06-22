@@ -7,6 +7,7 @@
   - [🛠️ Built With ](#️-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -51,6 +52,12 @@ React.js
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> [🎉 see live ](https://bookstore-ankitt26k.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -126,7 +133,10 @@ npx eslint .
 
 ### Deployment
 
-coming soon....
+```
+$ npm run build
+$ npm start
+```
 
 
 
