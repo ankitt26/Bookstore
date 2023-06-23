@@ -1,0 +1,42 @@
+.progressDiv {
+  width: 150px;
+  display: flex;
+  margin-left: 350px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+}
+
+.value {
+  color: black;
+  font-size: 32px;
+}
+
+.percent {
+  color: #121212;
+  font-size: 32px;
+}
+
+.completed {
+  font-size: 14px;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.progressBarWrapper {
+  width: 65px;
+}
+
+.progressBar path {
+  stroke: #3f51b5;
+  font-size: 300px;
+  stroke-linecap: butt;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.progressBar text {
+  fill: #0290ff;
+  font-size: 96px;
+  font-weight: bold;
+}

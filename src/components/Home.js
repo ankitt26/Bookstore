@@ -36,6 +36,7 @@ const Home = () => {
   return (
     <>
       <div>{arrayData.map(renderData)}</div>
+      <hr />
       <AddNewBook />
     </>
   );
