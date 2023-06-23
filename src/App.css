@@ -1,10 +1,12 @@
 body {
   text-align: center;
   background-color: #f5f6fa;
+  margin: 0;
 }
 
 .active {
-  color: rgb(81, 76, 76);
+  color: #121212;
+  opacity: 1;
 }
 
 hr {

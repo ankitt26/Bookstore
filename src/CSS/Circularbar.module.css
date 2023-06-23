@@ -10,17 +10,18 @@
 
 .value {
   color: black;
-  font-size: 20px;
+  font-size: 32px;
 }
 
 .percent {
-  color: #7d7d7e;
-  font-size: 30px;
+  color: #121212;
+  font-size: 32px;
 }
 
 .completed {
   font-size: 14px;
-  color: #313131;
+  color: #121212;
+  opacity: 0.5;
 }
 
 .progressBarWrapper {

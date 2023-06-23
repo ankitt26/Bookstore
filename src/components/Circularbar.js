@@ -14,7 +14,6 @@ const CircularProgressBar = () => {
       <div>
         <span className={styles.percent}>
           {value}
-          {' '}
           %
         </span>
         <br />

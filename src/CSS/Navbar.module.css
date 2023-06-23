@@ -1,19 +1,18 @@
 .nav {
-  width: 96%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   border-radius: 5px;
   height: 4.938rem;
-  margin: 14px auto;
   margin-bottom: 15px;
   background-color: #fff;
 }
 
 h1 {
   width: 15rem;
-  padding-left: 20px;
+  padding-left: 50px;
   font-family: Montserrat, sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
@@ -25,7 +24,7 @@ h1 {
 }
 
 ul {
-  width: 10rem;
+  width: 12rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -40,13 +39,14 @@ ul {
   width: 3.688rem;
   height: 1rem;
   font-family: Montserrat, sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
-  color: #2c2b2b;
+  opacity: 0.5;
+  color: #121212;
   text-decoration: none;
 }
 
@@ -54,20 +54,26 @@ ul {
   width: 6.563rem;
   height: 1rem;
   font-family: Montserrat, sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
-  color: #2c2b2b;
+  opacity: 0.5;
+  color: #121212;
   text-decoration: none;
 }
 
 .user {
+  width: 26px;
+  height: 26px;
   color: #0290ff;
   font-size: 22px;
   position: relative;
-  left: 765px;
+  left: 730px;
   cursor: pointer;
+  padding: 5px;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
 }

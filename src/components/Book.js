@@ -41,7 +41,7 @@ const Book = ({
       <div className={styles.chapter}>
         <h3 className={styles.currentChapter}>CURRENT CHAPTER</h3>
         <h3 className={styles.chapter1}>Chapter 1: &quot; Introduction &quot;</h3>
-        <button className={styles.chapterBtn} type="button">Update Progress</button>
+        <button className={styles.chapterBtn} type="button">UPDATE PROGRESS</button>
       </div>
     </div>
   );
